@@ -8,10 +8,10 @@ def index():
     '''
     view root page function that returns the index page and its data
     '''
-    title = 'Popular News'
+    title = 'Welcome To The Best Popular News Website Online'
     return render_template('index.html', title = title)
 
-@app.route('/news/<int:news_id>')
+@app.route('/news/<news_id>')
 def news(news_id):
     '''
     View news page function that returns the news source page and its article
