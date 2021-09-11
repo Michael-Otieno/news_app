@@ -10,3 +10,10 @@ def index():
     '''
     title = 'Popular News'
     return render_template('index.html', title = title)
+
+@app.route('/news/<int:news_id>')
+def news(news_id):
+    '''
+    View news page function that returns the news source page and its article
+    '''
+    return render_template('news.html', id = news_id)
