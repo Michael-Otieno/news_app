@@ -2,18 +2,22 @@
 ## Author
 Michael Otieno
 ## Description
-
+An application where you can get all your news from different sources around the world
 
 ## Set Up and Installation
 The application requires the following to operate smoothly
 
 
 ## How To use the application
+You require and internet connetion to interact with the app
   
-##Technology used
+## Technology used
 Python3.8
+Flask
+Html
+bootstrap
 
-##Known bugs
+## Known bugs
 No known bugs if found, contact michael.otieno@student.moringascool.com
 Also feel free to clone the application to improve features.
 
