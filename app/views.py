@@ -1,8 +1,8 @@
-# Where we will create all our view functions.
-from app.models import source
+from app.source_test import ArticleTest
+from app.models.source import Article
 from flask import render_template
 from app import app
-from request import get_sources
+from .request import get_sources,get_articles
 
 #views
 @app.route('/')
@@ -25,9 +25,40 @@ def index():
      business = source_business, technology = source_technology, sports = source_sports,
      entertainment = source_entertainment, health = source_health, science = source_science )
 
-@app.route('/source/<source_id>')
-def news(source_id):
+
+
+@app.route('/source/<int:id>')
+def source(id):
     '''
-    View news page function that returns the news source page and its article
+    View movie page function that returns the movie details page and its data
     '''
-    return render_template('source.html', id = source_id)
+    source = get_sources(id)
+    title = f'{source.title}'
+    return render_template('source.html',title = title,source= source)
+
+@app.route('/article/<article>')
+def article(id):
+    '''
+    View movie page function that returns the movie details page and its data
+    '''
+    article = get_articles(id)
+    title = f'{id}'
+    return render_template('source.html',title = title,article= article, art=article)
+
+
+
+
+
+
+
+
+# @app.route('/source/<source_id>')
+# def artcicles(source_id):
+
+#     '''
+#     View news page function that returns the news details page and its data
+#     '''
+    
+#     return render_template('index.html',id = source_id)
+
+

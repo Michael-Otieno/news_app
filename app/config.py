@@ -4,7 +4,10 @@ class Config:
     General configuration parent class
     '''
     #Recheck base url
-    SOURCE_API_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+    SOURCE_API_BASE_URL= 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+
+    # #added article
+    ARTICLE_API_BASE_URL = 'https://newsapi.org/v2/everything?q={}&apiKey={}'
 
 
 
