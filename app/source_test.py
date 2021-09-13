@@ -12,8 +12,7 @@ class SourceTest(unittest.TestCase):
         '''
         Set up method that will run before every test
         '''
-        self.new_source = Source('id',"TechCrunch","Fitbit adds ECG and stress-level",
-        "Fitness band market", "share is undoubtedly contracting","category")########
+        self.new_source = Source('id',"name","title","description", "category","image",'url')########
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_source, Source))
@@ -27,8 +26,7 @@ class ArticleTest(unittest.TestCase):
         '''
         Set up method that will run before every test
         '''
-        self.new_article = Article("id","TechCrunch","Fitbit adds ECG and stress-level",
-        "Fitness band", "market share is", "undoubtedly contracting",'publishedAt',"category")
+        self.new_article = Article("id","name","title", "description", "url", "image",'publishedAt',"content")
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_article, Article))

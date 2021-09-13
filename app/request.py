@@ -45,6 +45,7 @@ def process_results(source_list):
 
     source_results = []
     for source_item in source_list:
+        id = source_item.get('id')
         name = source_item.get('name')
         title = source_item.get('title')
         description = source_item.get('description')
@@ -52,7 +53,7 @@ def process_results(source_list):
         image = source_item.get('urlToImage')
         url = source_item.get('url')
 
-        source_object = Source( name, title, description, category,image, url)
+        source_object = Source( id,name, title, description, category,image, url)
         source_results.append(source_object)
 
     return source_results

@@ -2,7 +2,8 @@ class Source:
     '''
     Source class to define Source objects
     '''
-    def __init__(self, name,title, description,category, urlToImage,url):
+    def __init__(self,id, name,title, description,category, urlToImage,url):
+        self.id = id
         self.name = name
         self.title = title
         self.description = description

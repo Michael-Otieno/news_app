@@ -36,7 +36,7 @@ def source(id):
     title = f'{source.title}'
     return render_template('source.html',title = title,source= source)
 
-@app.route('/article/<article>')
+@app.route('/article/<int:id>')
 def article(id):
     '''
     View movie page function that returns the movie details page and its data
